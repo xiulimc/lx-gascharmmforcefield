@@ -1,0 +1,35 @@
+;;
+;; GROMACS topology file for CO2
+;;
+
+
+[ moleculetype ]
+; name	nrexcl
+CO2	     2
+
+[ atoms ]
+; nr	type	resnr	residu	atom	cgnr	charge	mass
+  1     CG2O7     1      CO2      C     1     0.686      0    
+  2     OG2D5     1      CO2      O1    2    -0.343      0   
+  3     OG2D5     1      CO2      O2    3    -0.343      0 
+  4      M1       1      CO2      M1    4     0.000    22.0045     
+  5      M2       1      CO2      M2    5     0.000    22.0045
+
+[ virtual_sites2 ]
+; the M--O distance is 0.116 - 0.098884 = 0.017116
+; the M--M distance is 0.197823
+; therefore, the fraction of the distance along the M--M length is (0.197823+0.017116)/0.197823 = 1.086545
+; thus placing the virtual O sites beyond the M--M distance 
+; site  ai  aj  funct   a
+     1   4   5      1   0.5   ; relative to mass center 4, extends beyond mass center 5 
+     2   4   5      1   1.08637      ; right in the middle
+     3   5   4      1   1.08637   ; as in the case of site 1
+
+[ constraints ]
+  4     5     2    0.197768
+
+[ exclusions ]
+    1     2     3
+    2     1     3
+    3     1     2
+

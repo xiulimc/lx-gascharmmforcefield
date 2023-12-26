@@ -1,0 +1,17 @@
+;;
+;; CHARMM36 FF in GROMACS format
+;;
+
+
+[ defaults ]
+; nbfunc	comb-rule	gen-pairs	fudgeLJ	fudgeQQ
+1	2	yes	1.0	1.0
+
+[ atomtypes ]
+; name	at.num	mass	charge	ptype	sigma	epsilon	;	sigma_14	epsilon_14	
+ CG2O7     0      0       0.686    V    2.78494939291e-01     2.426720e-01 
+ OG2D5     0      0      -0.343    V    3.01480126219e-01     6.903600e-01
+   M1      0    22.0045     0      A         0              0    
+   M2      0    22.0045     0      A         0              0
+   
+ 

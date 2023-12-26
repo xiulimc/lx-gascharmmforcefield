@@ -1,0 +1,20 @@
+;;
+;; GROMACS topology file for CO2
+;;
+
+
+[ moleculetype ]
+; name	nrexcl
+CO	     2
+
+[ atoms ]
+; nr	type	resnr	residu	atom	cgnr	charge	mass  
+  1        OG2D5     1      CO      O     1    -0.0203    15.9990
+  2        CG2O7     1      CO      C     2     0.0203    12.0110    
+
+[ bonds ]
+; ai	aj	funct	b0	Kb
+  1     2        1    0.1128   1.114300e+06
+
+[ constraints ]
+  1    2    1   0.1128 
